@@ -1,0 +1,17 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    width: 1150px;
+    background-color:bisque;
+}
+
+.content{
+    flex:1;
+    min-height: 500px;
+}
