@@ -1,0 +1,48 @@
+.header {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: -8px;
+
+    .back-btn {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        margin-left: 28px;
+        background-color: transparent;
+        font-size: 10px;
+    }
+
+    h4 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.menu-list {
+    min-width: 224px;
+    padding-bottom: 8px;
+
+    .menu-item {
+        width: 100%;
+        border: none;
+        border-radius: none;
+        height: 41px;
+        padding: 10px 8px 10px 16px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .menu-item:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+
+    .menuLevel2 {
+        padding: 10px 24px;
+        font-weight: 400;
+        font-size: 1.4rem;
+    }
+}

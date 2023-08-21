@@ -8,7 +8,7 @@ function Sidebar() {
     return ( 
         <div className={cx("wrapper")}>
             <div className={cx("container")} >
-                
+                Sidebar
             </div>
         </div>
     );
