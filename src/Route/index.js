@@ -3,7 +3,7 @@ import Home from '~/Pages/Home';
 import Following from '~/Pages/Following';
 import Upload from '~/Pages/Upload';
 //Layout
-import { Defautlayout, HeaderOnly } from '~/Components/Layout';
+import { Defautlayout, HeaderOnly } from '~/Layout';
 
 const publicRoute = [
     { path: '/', component: Home, layout: Defautlayout },

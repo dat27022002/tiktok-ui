@@ -1,9 +1,6 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faCircleXmark,
-    faSpinner,
-    faMagnifyingGlass,
     faPlus,
     faEllipsisVertical,
     faEarth,
@@ -16,15 +13,13 @@ import {
     faBookmark,
     faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
-import TippyHeadless from '@tippyjs/react/headless';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import { Wrapper as PropWrapper } from '~/Components/Prop';
+import Search from './Search';
 import Button from '~/Components/Button';
-import SearchResult from '~/Components/Prop/ResultSearch';
 import Menu from '~/Components/Prop/Menu';
 import { MailboxIcon, MessengerIcon } from '~/Components/Icons';
 import Image from '~/Components/Image';
@@ -115,31 +110,10 @@ function Header() {
                 <div className={cx('logo')}>
                     <img src={images.logo} alt="titok"></img>
                 </div>
-                <TippyHeadless
-                    render={(attrs) => (
-                        <PropWrapper tabIndex="-1" {...attrs}>
-                            <SearchResult />
-                        </PropWrapper>
-                    )}
-                    interactive
-                >
-                    <div className={cx('search')}>
-                        <input placeholder="Please enter"></input>
 
-                        <button className={cx('clear-btn')}>
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
-                        <span className={cx('loading')}>
-                            <FontAwesomeIcon icon={faSpinner} />
-                        </span>
+                <Search />
 
-                        <span className={cx('spacer')}></span>
-
-                        <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </button>
-                    </div>
-                </TippyHeadless>
+                {/* action */}
                 <div className={cx('action')}>
                     <Button className={cx('upload')} borderDark leftIcon={faPlus}>
                         Upload

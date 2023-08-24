@@ -1,0 +1,86 @@
+.search {
+    position: relative;
+    width: var(--width-search);
+    min-width: 200px;
+    padding-left: 16px;
+    border-radius: 92px;
+    height: 46px;
+    background: rgba(22, 24, 35, 0.06);
+    font-size: 2rem;
+    border: 0.6px groove transparent;
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        height: 100%;
+        caret-color: var(--primary);
+    }
+
+    &:hover {
+        border-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:hover .search-btn {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #333;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: #333;
+    }
+}
+
+.clear-btn,
+.loading {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(var(--width-search-btn) + 12px);
+    color: rgb(167, 167, 171);
+    font-size: 1.4rem;
+    border: none;
+}
+
+.loading {
+    animation: spiner linear 0.8s infinite;
+}
+
+@keyframes spiner {
+    0% {
+        transform: translateY(-50%) rotate(0);
+    }
+
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.spacer {
+    position: absolute;
+    height: 28px;
+    width: 1px;
+    background-color: rgba(22, 24, 35, 0.12);
+    right: var(--width-search-btn);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-btn {
+    position: absolute;
+    height: 100%;
+    width: var(--width-search-btn);
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+    border: none;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    color: rgba(22, 24, 35, 0.34);
+    font-size: 1.8rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

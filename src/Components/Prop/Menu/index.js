@@ -46,10 +46,12 @@ function Menu({ children, data }) {
     return (
         <Tippy
             render={(attrs) => (
-                <Wrapper tabIndex="-1" {...attrs}>
-                    {current.title && <Header onBack={handleBack}>{current.title}</Header>}
-                    <div className={cx('menu-list')}>{renderMenuList(current.data)}</div>
-                </Wrapper>
+                <div>
+                    <Wrapper tabIndex="-1" {...attrs}>
+                        {current.title && <Header onBack={handleBack}>{current.title}</Header>}
+                        <div className={cx('menu-list')}>{renderMenuList(current.data)}</div>
+                    </Wrapper>
+                </div>
             )}
             interactive
             placement="bottom-end"

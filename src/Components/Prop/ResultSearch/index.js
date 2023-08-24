@@ -5,16 +5,16 @@ import styles from './SearchResult.module.scss';
 import SearchItem from './SearchItem';
 
 const cx = classNames.bind(styles);
-function SearchResult() {
+function SearchResult({ data, valueInput }) {
     return (
         <Fragment>
             <SearchItem content />
             <SearchItem content />
             <div className={cx('header-list-account')}>Tài khoản</div>
-            <SearchItem account />
-            <SearchItem account />
-            <SearchItem account />
-            <div className={cx('footer-result-search')}>Xem tất cả kết quả dành cho "đỗ"</div>
+            {data.map((item) => (
+                <SearchItem account key={item.id} data={item} />
+            ))}
+            <div className={cx('footer-result-search')}>Xem tất cả kết quả dành cho "{valueInput}"</div>
         </Fragment>
     );
 }
