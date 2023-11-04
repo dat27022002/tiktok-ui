@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import Button from '../../Button';
 
 function MenuItem({ title, icon, className }) {
@@ -7,5 +9,11 @@ function MenuItem({ title, icon, className }) {
         </Button>
     );
 }
+
+MenuItem.propTypes = {
+    title: PropTypes.string,
+    icon: PropTypes.element,
+    className: PropTypes.string,
+};
 
 export default MenuItem;

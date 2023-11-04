@@ -5,10 +5,12 @@ import Upload from '~/Pages/Upload';
 //Layout
 import { Defautlayout, HeaderOnly } from '~/Layout';
 
+import { Path } from '~/config/route';
+
 const publicRoute = [
-    { path: '/', component: Home, layout: Defautlayout },
-    { path: '/folowing', component: Following, layout: Defautlayout },
-    { path: '/upload', component: Upload, layout: HeaderOnly },
+    { path: Path.HOME, component: Home, layout: Defautlayout },
+    { path: Path.FOLLOWING, component: Following, layout: Defautlayout },
+    { path: Path.UPLOAD, component: Upload, layout: HeaderOnly },
 ];
 const privateRoute = [];
 
